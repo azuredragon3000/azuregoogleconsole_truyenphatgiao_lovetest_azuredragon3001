@@ -1,13 +1,17 @@
 package com.myapp.app119;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.myapp.mylibrary.DB.ItemTruyen;
+import com.myapp.mylibrary.ads.AdsInterstitial;
+import com.myapp.mylibrary.recycleview.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
 
@@ -36,7 +40,6 @@ public class HomeActivity extends AppCompatActivity {
                 intent.putExtra("Position",index);
                 startActivity(intent);
                 adsInterstitial.showAds(activity);
-                //Toast.makeText(getApplicationContext(), "clicked item index is " + index, Toast.LENGTH_LONG).show();
             }
         };
 
@@ -44,7 +47,6 @@ public class HomeActivity extends AppCompatActivity {
         AdapterTruyen adapterTruyen = new AdapterTruyen(this,arrayList,listener,this);
         rc.setAdapter(adapterTruyen);
         rc.setLayoutManager(new GridLayoutManager(this,2));
-        //GridLayoutManager gridLayoutManager = new GridLayoutManager(this);
         if (value == Configuration.ORIENTATION_PORTRAIT) {
             spanCount = 2;
         }
@@ -59,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private ArrayList<ItemTruyen> getItems() {
 
-        TruyenPhatGiaoDB truyenPhatGiaoDB = ((SubApp) this.getApplication()).getTruyenPhatGiaoDB();
+        TruyenPGDB truyenPhatGiaoDB = ((SubApp) this.getApplication()).getTruyenPhatGiaoDB();
         ArrayList<ItemTruyen> arr = truyenPhatGiaoDB.getArrayItem();
         return arr;
     }

@@ -28,10 +28,6 @@
             android:theme="@style/Theme.App119.NoActionBar"
             android:exported="false" />
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8404443559572571~6003126710" />
