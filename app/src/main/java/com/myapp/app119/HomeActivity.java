@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         ArrayList<ItemTruyen> arrayList = getItems();
         adsInterstitial = new AdsInterstitial(
                 "07CC7E40850ABA2DF210A2D2564CAD76",
-                "ca-app-pub-8404443559572571/1888597557",
+                "ca-app-pub-8404443559572571/6514224617",
                 this);
 
         ListenerItem listener = new ListenerItem() {
