@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.myapp.app119.ScrollingActivity" >
+    tools:context="com.myapp.lovetest_azuredragon3001.ScrollingActivity" >
     <item android:id="@+id/action_settings"
         android:title="Menu"
         android:orderInCategory="100"
